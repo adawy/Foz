@@ -1,0 +1,547 @@
+@font-face {
+    font-family: 'Tajawal_B';
+    src: url("../fonts/Tajawal/Tajawal-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Tajawal_R';
+    src: url("../fonts/Tajawal/Tajawal-Regular.ttf") format("truetype");
+}
+
+:root {
+    --main-color: #268f85;
+    --orange-color: #f08406;
+    --white-color: #fff;
+    --black-color: #1e1e1e;
+    --bg-gradient: linear-gradient(90deg, rgba(62, 208, 140, 0) 0%, #3ed08c 99.54%);
+}
+#preloader_6 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 999999;
+    animation: preloader_6 5s infinite linear;
+    margin: auto;
+    top: 0
+}
+
+.preloader-contant {
+    width: 205px;
+    margin: auto;
+    height: 70px;
+    position: relative;
+    top: 50%;
+    margin-top: -42px;
+    animation: rotat 4s infinite linear
+}
+
+#preloader_6 img {
+    position: absolute;
+    left: 0;
+    object-fit: contain;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    animation: preloader_4 1s infinite ease-in-out
+}
+@keyframes preloader_4 {
+    0% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-10px)
+    }
+
+    100% {
+        transform: translateY(0)
+    }
+}
+html,body{
+    direction: rtl;
+    text-align: right;
+}
+
+*,
+html,
+body,
+section,
+div,
+a,
+button {
+    font-family: 'Tajawal_R', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: 'Tajawal_B', sans-serif;
+}
+label{
+    font-size: 15px;
+    opacity: 0.8;
+}
+a, a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+span,p,li{
+    color: #676c78;
+}
+ul{
+    list-style: none;
+    margin-bottom: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.contain_img{
+    background-image: url(../images/portrait-young-muslim-businessman-using-mobile-phone-successful-arab-boy-traditional-clothes-representing-technology.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+/*buttons*/
+.site_btn{
+    border: 1px solid var(--orange-color);
+    border-radius: 30px;
+    display: block;
+    padding: 10px 15px;
+    transition: all 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+.site_btn::after{
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: var(--orange-color);
+    transition: all 0.5s ease-in-out;
+    top: 0;
+}
+.site_btn span{
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+    color:  var(--orange-color);
+}
+.min-width-custom{
+    min-width: 170px;
+}
+.site_btn:hover::after{
+    width: 100%;
+}
+.site_btn:hover span{
+    color: var(--white-color);
+    transition: all 0.5s ease-in-out;
+}
+.site_btn svg {
+    position: relative;
+    z-index: 1;
+}
+.site_btn svg path{
+    transition: all 0.5s ease-in-out;
+}
+.site_btn:hover svg path{
+    fill: var(--white-color);
+    transition: all 0.5s ease-in-out;
+}
+.dark_site_btn{
+    background-color: var(--orange-color);
+    max-width: 300px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+.site_btn.dark_site_btn::after{
+    background-color: var(--white-color);
+}
+.site_btn.dark_site_btn span{
+    color: #fff;
+}
+.dark_site_btn:hover i,
+.site_btn.dark_site_btn:hover span{
+    color: var(--orange-color);
+    transition: all 0.5s ease-in-out;
+}
+.site_btn.dark_site_btn i{
+    position: relative;
+    z-index: 9;
+}
+/*header*/
+header{
+    padding: 10px 0;
+}
+header nav,
+header nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+header nav ul li a{
+    color: var(--black-color);
+    transition: all 0.5s ease-in-out;
+    position: relative;
+}
+header nav ul.nav li a::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: transparent;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    bottom: -2px;
+    right: 0;
+}
+header nav ul.nav li a:hover::after,
+header nav ul.nav li.activer a::after{
+    background-color: var(--orange-color);
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+}
+header nav ul.nav li a:hover,
+header nav ul.nav li.active a,
+.story_txt ul li i{
+    color:var(--orange-color);
+    transition: all 0.5s ease-in-out;
+}
+.story_txt ul li i{
+    font-size: 10px;
+}
+#foz_story .story_txt .join_now{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#foz_story .story_txt h1,
+#foz_story .story_txt .join_now h5{
+color: var(--main-color);
+}
+#foz_aspirations,
+footer{
+    background: rgb(26,125,119);
+    background: linear-gradient(81deg, rgba(26,125,119,1) 0%, rgba(81,129,71,1) 55%);
+}
+#foz_aspirations h2{
+    color: var(--white-color);
+}
+.pos_relative{
+    position: relative;
+    overflow: hidden;
+}
+.main-img{
+    object-fit: contain;
+    height: 400px;
+    margin-bottom: 50px;
+}
+.foz_aspirations_item p{
+    color: var(--white-color);
+}
+.foz_aspirations_item .icon_img{
+    width: 110px;
+    height: 110px;
+    background-color: var(--orange-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto 15px;
+}
+.foz_aspirations_item .icon_img img{
+    width: 70px;
+    height: 70px;
+}
+#foz_features h2,
+.with_foz h2,
+.with_foz_provder h2,
+#foz_services h2{
+    color: var(--main-color);
+}
+.with_foz_provder .fixed_img{
+    right:0;
+    left: unset;
+    transform: rotateZ(180deg);
+}
+#foz_features .container{
+    position: relative;
+    z-index: 9;
+}
+#foz_features h3,
+.with_foz h3,
+.with_foz_provder h3,
+#free_try h2{
+    color: var(--orange-color);
+}
+.with_foz{
+    background-color: #F5F4F4;
+}
+.servie_item{
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #dadada;
+    padding: 20px;
+    border:1px solid transparent;
+    transition: all 0.5s ease-in-out;
+    background-color: #fff;
+}
+.servie_item:hover{
+    border-color: var(--orange-color);
+    transform: scale(1.07);
+    transition: all 0.5s ease-in-out;
+}
+.servie_item p{
+    margin-bottom: 0;
+    min-height: 175px;
+    font-size: 14px;
+    display: block;
+}
+.servie_item h5{
+    color: var(--orange-color);
+}
+.foz_features_item img,
+.servie_item img{
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin:0 auto 15px;
+    display: block;
+}
+.servie_item img{
+    width: 110px;
+    height: 110px;
+}
+.fixed_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+}
+.with_foz .foz_aspirations_item p{
+    color: #1e1e1e;
+    text-align: center;
+}
+#free_try .join_btn.site_btn{
+    width: 240px;
+    margin: auto;
+}
+#free_try .join_btn.site_btn span{
+    color:var(--main-color);
+    font-weight: bold;
+}
+footer{
+    color: #fff;
+    padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+}
+.footer-img{
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    object-fit: contain;
+    width: 250px;
+    height: auto;
+}
+footer .footer-item img{
+    width: 100px;
+    object-fit: contain;
+}
+footer .site_btn{
+    border-color: var(--white-color);
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    padding: 10px 20px;
+    display: block;
+    font-size: 14px;
+}
+footer .site_btn span{
+    color: var(--white-color);
+}
+footer img{
+    margin-bottom: 10px;
+    width: 150px;
+}
+header .logo{
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 60px;
+  margin-inline-end: 20px;
+}
+header .logo img{
+    object-fit: contain;
+    height: 40px;
+}
+.cust-btn{
+    background-color: #EE5050;
+    color: #fff;
+    border: 0.0625rem solid transparent;
+    padding: 0.5rem 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: block;
+    width: fit-content;
+    border-radius: 0.5rem;
+}
+.FAQ .back i {
+    color:var(--orange-color);
+    font-size: 35px;
+    cursor: pointer;
+}
+.FAQ h5{
+    color: var(--orange-color);
+}
+/* main-slider */
+/* over-lay */
+.over-lay {
+    background-color: #268f85a1;
+    position: fixed;
+    z-index: 9;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.open-ovelay {
+    width: 100%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.mob-nav li a{
+    display: block;
+    margin-bottom: 5px;
+    padding: 5px 0 ;
+}
+.footer-item .social{
+    margin-top: 20px;
+}
+.footer-item .social li a{
+    background-color: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: var(--main-color);
+    display: block;
+    font-size: 20px;
+    border-radius: 50%;
+}
+.open-nav{
+    transform: translateX(0)!important;
+    transition: all 0.5s ease-in-out;
+}
+.mob-bar{
+    display: none;
+}
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    right: 0;
+    z-index: 92;
+    background-color: #fff;
+}
+main{
+    padding-top: 80px;
+}
+@media(max-width:1199px){
+    .footer-item h3{
+        font-size: 20px;
+    }
+    .footer-item a{
+        font-size: 14px;
+    }
+    header .logo{
+        width: 120px;
+        height: 50px;
+        object-fit: contain;
+    }
+}
+@media(max-width:991px){
+    .servie_item{
+        margin-bottom: 30px;
+    }
+    .servie_item p{
+        min-height: 100px;
+    }
+    header nav ul.nav{
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    right: 0;
+    height: 100%;
+    background: var(--main-color);
+    transform: translateX(250px);
+    color: #fff;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    }
+    header nav ul.nav li a{
+        color: #fff;
+    }
+    .footer-item .site_btn{
+        margin-top: 15px;
+    }
+    .mob-bar{
+        display: block;
+    }
+
+
+    .mob-nav{
+        display: block;
+    }
+}
+@media(max-width:767px){
+    .FAQ .back i{
+        font-size: 25px;
+    }
+    .FAQ h1{
+        font-size: 20px;
+    }
+    .FAQ .back {
+        margin-bottom: 20px!important;
+    }
+    .FAQ h5{
+        font-size: 17px;
+        line-height: 27px;
+    }
+    .FAQ p{
+        font-size: 14px;
+    }
+    .min-width-custom{
+        min-width: 140px;
+        font-size: 14px;
+        padding: 10px;
+    }
+    .fixed_img{
+        width: 165px;
+    }
+    .footer-item{
+        margin-bottom: 20px;
+    }
+}
+@media(max-width:400px){
+    header .site_btn{
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+}
